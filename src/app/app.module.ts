@@ -1,22 +1,21 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppComponent } from './app.component';
-import { DirectiveTestComponent } from './directive-test/directive-test.component';
-import { BoldDirective } from './directives/bold.directive';
-import { UnderlineDirective } from './directives/underline.directive';
+import { AppComponent } from "./app.component";
+import { DirectiveTestComponent } from "./directive-test/directive-test.component";
+import { BoldDirective } from "./directives/bold.directive";
+import { UnderlineDirective } from "./directives/underline.directive";
+import { MouseEnterDirective } from "./directives/mouse-enter.directive";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DirectiveTestComponent,
-  ],
+  declarations: [AppComponent, DirectiveTestComponent],
   imports: [
     BrowserModule,
     UnderlineDirective,
-    BoldDirective
+    BoldDirective,
+    MouseEnterDirective,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
