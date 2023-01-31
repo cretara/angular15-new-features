@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { MouseEnterDirective } from "../directives/mouse-enter.directive";
 
 @Component({
-  selector: 'app-directive-test',
-  templateUrl: './directive-test.component.html',
-  styleUrls: ['./directive-test.component.css']
+  selector: "app-directive-test",
+  templateUrl: "./directive-test.component.html",
+  styleUrls: ["./directive-test.component.css"],
+  hostDirectives: [MouseEnterDirective],
 })
-export class DirectiveTestComponent {
-
-}
+export class DirectiveTestComponent {}
