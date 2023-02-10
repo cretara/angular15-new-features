@@ -17,8 +17,8 @@ export class DirectiveTestComponent implements OnInit {
   ngOnInit(): void {
     this.eventDirective.data = {
       id: 1,
-      header: "header test",
-      body: "body test",
+      header: "API header test",
+      body: "API body test",
     };
   }
 }
