@@ -6,19 +6,21 @@ import { BoldDirective } from "./directives/bold.directive";
 import { UnderlineDirective } from "./directives/underline.directive";
 import { MouseEnterDirective } from "./directives/mouse-enter.directive";
 import { EventDirective } from "./directives/event.directive";
-import { DirectiveTestComponent } from "./directive-test/directive-test.component";
 import { HttpClientModule } from "@angular/common/http";
+import { MenuComponent } from './components/injection/menu/menu.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/injection/menu/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MenuComponent, HomeComponent],
   imports: [
     BrowserModule,
     UnderlineDirective,
     BoldDirective,
     MouseEnterDirective,
     EventDirective,
-    DirectiveTestComponent,
     HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
