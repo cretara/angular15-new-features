@@ -1,6 +1,6 @@
-import { Directive, HostListener, NgZone } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { take } from "rxjs";
+import {Directive, HostListener, NgZone} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+import {take} from "rxjs";
 
 interface DataEntity {
   id: number;
@@ -13,9 +13,14 @@ interface DataEntity {
   standalone: true,
 })
 export class EventDirective {
-  data: any;
+  data: DataEntity = {
+    id: 0,
+    body: "",
+    header: ""
+  };
 
-  constructor(private httpClient: HttpClient, private ngZone: NgZone) {}
+  constructor(private httpClient: HttpClient, private ngZone: NgZone) {
+  }
 
   @HostListener("click")
   public onClick() {
