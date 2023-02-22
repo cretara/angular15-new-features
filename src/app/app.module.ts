@@ -11,10 +11,10 @@ import {MenuComponent} from './injection/menu/menu.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HomeComponent} from './injection/menu/home/home.component';
 import {RouterLink, RouterOutlet} from "@angular/router";
-import { CatBlogComponent } from './image-optimization/components/cat-blog/cat-blog.component';
+import {CatBlogComponent} from "./image-optimization/components/cat-blog/cat-blog.component";
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, HomeComponent, CatBlogComponent],
+  declarations: [AppComponent, MenuComponent, HomeComponent],
   imports: [
     BrowserModule,
     UnderlineDirective,
@@ -25,9 +25,12 @@ import { CatBlogComponent } from './image-optimization/components/cat-blog/cat-b
     AppRoutingModule,
     RouterOutlet,
     RouterLink,
+    CatBlogComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [
+  ]
 })
 export class AppModule {
 }

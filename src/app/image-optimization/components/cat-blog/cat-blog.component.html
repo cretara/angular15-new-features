@@ -1,1 +1,12 @@
-<p>cat-blog works!</p>
+<div class="p-1">
+  <img [ngSrc]="catList[0].url"
+       [alt]="catList[0].id"
+       [height]="catList[0].height"
+       [width]="catList[0].width">
+</div>
+<div *ngFor="let cat of catList | slice: 1" class="p-1">
+  <img [ngSrc]="cat.url"
+       [alt]="cat.id"
+       [height]="cat.height"
+       [width]="cat.width">
+</div>
