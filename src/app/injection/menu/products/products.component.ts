@@ -1,7 +1,7 @@
 import {Component, inject, InjectionToken, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {first, map, Observable} from "rxjs";
-import {ProductService} from "../../../services/product.service";
+import {ProductService} from "../../services/product.service";
 import {HttpClient} from "@angular/common/http";
 
 function getRouterPathParam$(name: string): Observable<string> {

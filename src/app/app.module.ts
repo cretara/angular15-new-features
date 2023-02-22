@@ -2,18 +2,19 @@ import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 
 import {AppComponent} from "./app.component";
-import {BoldDirective} from "./directives/bold.directive";
-import {UnderlineDirective} from "./directives/underline.directive";
-import {MouseEnterDirective} from "./directives/mouse-enter.directive";
-import {EventDirective} from "./directives/event.directive";
+import {BoldDirective} from "./directive-composition-api/directives/bold.directive";
+import {UnderlineDirective} from "./directive-composition-api/directives/underline.directive";
+import {MouseEnterDirective} from "./directive-composition-api/directives/mouse-enter.directive";
+import {EventDirective} from "./directive-composition-api/directives/event.directive";
 import {HttpClientModule} from "@angular/common/http";
-import {MenuComponent} from './components/menu/menu.component';
+import {MenuComponent} from './injection/menu/menu.component';
 import {AppRoutingModule} from './app-routing.module';
-import {HomeComponent} from './components/menu/home/home.component';
+import {HomeComponent} from './injection/menu/home/home.component';
 import {RouterLink, RouterOutlet} from "@angular/router";
+import { CatBlogComponent } from './image-optimization/components/cat-blog/cat-blog.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, HomeComponent],
+  declarations: [AppComponent, MenuComponent, HomeComponent, CatBlogComponent],
   imports: [
     BrowserModule,
     UnderlineDirective,

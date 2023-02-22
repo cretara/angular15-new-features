@@ -1,14 +1,14 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
-import {HomeComponent} from "./components/menu/home/home.component";
+import {HomeComponent} from "./injection/menu/home/home.component";
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {
     path: 'product/:id',
     loadComponent: () =>
-      import('../app/components/menu/products/products.component').then(
+      import('./injection/menu/products/products.component').then(
         (it) => it.ProductsComponent
       ),
   },

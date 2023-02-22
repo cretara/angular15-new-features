@@ -7,8 +7,4 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "angular15-new-features";
-
-  onHover() {
-    console.debug("hover emitted");
-  }
 }
