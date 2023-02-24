@@ -8,6 +8,14 @@ interface Cat {
   height: number,
 }
 
+/**
+ *
+ * @returns {Promise<Response>}
+ */
+async function generateAPICallError() {
+  return fetch("https://my-domain.com")
+}
+
 @Component({
   selector: 'app-cat-blog',
   templateUrl: './cat-blog.component.html',
@@ -16,7 +24,6 @@ interface Cat {
   imports: [CommonModule, NgOptimizedImage]
 })
 export class CatBlogComponent {
-
   public readonly catList: Cat[] = [
     {
       "id": "382",
@@ -79,6 +86,10 @@ export class CatBlogComponent {
       "height": 1024
     }
   ]
+
+  async generateError() {
+    await generateAPICallError();
+  }
 
 
 }
