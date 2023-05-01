@@ -11,9 +11,11 @@ import {MenuComponent} from './components/menu/menu.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HomeComponent} from './components/menu/home/home.component';
 import {RouterLink, RouterOutlet} from "@angular/router";
+import { PostsComponent } from './components/menu/posts/posts.component';
+import { PostDetailComponent } from './components/menu/posts/post-detail/post-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, HomeComponent],
+  declarations: [AppComponent, MenuComponent, HomeComponent, PostsComponent, PostDetailComponent],
   imports: [
     BrowserModule,
     UnderlineDirective,
