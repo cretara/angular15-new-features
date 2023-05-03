@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { PostDetailComponent } from "./post-detail.component";
+import { By } from "@angular/platform-browser";
 
 describe("PostDetailComponent", () => {
   let component: PostDetailComponent;
@@ -28,9 +29,10 @@ describe("PostDetailComponent", () => {
       title: title,
       body: "body test of post test",
     };
-    const postElement: HTMLElement = fixture.nativeElement;
-    const divTitle = postElement.querySelector("#title");
+    fixture.detectChanges();
+    const postElement = fixture.debugElement;
+    const divTitle = postElement.query(By.css("#title")).nativeElement;
     expect(divTitle).toBeDefined();
-    expect(divTitle).toContain(title);
+    expect(divTitle.textContent).toContain(title);
   });
 });
